@@ -17,6 +17,7 @@ import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 public class DragonBallClient {
     public DragonBallClient(ModContainer container) {
 
+
         container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
     }
 

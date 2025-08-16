@@ -1,5 +1,8 @@
 package com.alex2k.dragonball;
 
+import com.alex2k.dragonball.block.ModBlocks;
+import com.alex2k.dragonball.item.ModCreativeModeTabs;
+import com.alex2k.dragonball.item.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -26,6 +29,11 @@ public class DragonBall {
         modEventBus.addListener(this::commonSetup);
 
         NeoForge.EVENT_BUS.register(this);
+
+        ModCreativeModeTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
